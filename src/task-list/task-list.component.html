@@ -1,7 +1,0 @@
-<ng-content></ng-content>
-<input *ngIf="tasks.length" placeholder="search task.."  class="form-control" type="text" name="taskSearch" id="taskSearch" [(ngModel)]="SearchText" >
-<ul>
-    <li class="d-flex py-1 px-1" *ngFor = "let task of tasks |filterPipe: SearchText ; let i= index ">
-        {{ task}}
-        <button class="btn btn-outline-danger py-0" (click)="removeTask(i)">Delete</button></li>    
-  </ul>
